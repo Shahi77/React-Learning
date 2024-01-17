@@ -1,11 +1,13 @@
 /* Nested structures
 <div id = "parent">
 <div id="child">
-<h1>Hiii!!</h1>
+<h1>Hiii!!</h1> 
 <h2>Hello!!</h2>
 </div>
 </div>
  */
+import React from "react";
+import ReactDOM from "react-dom/client";
 const parent = React.createElement(
   //Prent div
   "div",
