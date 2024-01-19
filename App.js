@@ -1,40 +1,79 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-//React Element
-const heading = <h1 id="heading">Helo...</h1>;
+//Foody app
+/* Layout->
+Header : 
+-LOGO &
+-NavItems
+Body: 
+-Search, 
+-Restaurant Container,
+-Restaurant Card: 
+  -Image
+  -Restaurant Name
+  -Star Rating
 
-//React Functional component
-const HeadingComponent = () => {
+*/
+const Header = () => {
   return (
-    <div id="container">
-      <h1 className="heading">React Functional Component</h1>
+    <div className="header">
+      <div className="logo-container">
+        <img
+          className="logo"
+          src="https://images-platform.99static.com/v84irzbNBd5aawXGKXfH4SEjcn0=/0x0:960x960/500x500/top/smart/99designs-contests-attachments/117/117132/attachment_117132760"
+        />
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Cart</li>
+        </ul>
+      </div>
     </div>
   );
 };
 
-//Component composition
-const Title = () => (
-  <h1 className="head" tabIndex="5">
-    Hiii!!
-  </h1>
-);
-const HeadingComponent2 = () => (
-  <div id="container">
-    <Title />
-    <h2 className="heading">React</h2>
-  </div>
-);
+const RestaurantCard = () => {
+  return (
+    <div className="rest-card">
+      <img
+        className="res-logo"
+        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/973b80eb65d51f674614ae58f03cfe16"
+      />
+      <h3>Sooraj Sweets</h3>
+      <h4>Sweets,Indian,Asian</h4>
+      <h4>4.5 stars</h4>
+      <h4>32 minutes</h4>
+    </div>
+  );
+};
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search">Search</div>
+      <div className="rest-container">
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+      </div>
+    </div>
+  );
+};
 
-//Javascript inside of jsx
-const number = 1000;
-const HeadingComponent3 = () => (
-  <div id="container">
-    {/* react element inside fucntion component -> {heading} */}
-    {number}
-    <h3>{200 + 300}</h3>
-    <h2 className="heading">React</h2>
-  </div>
-);
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+      <Body />
+    </div>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<HeadingComponent3 />);
+root.render(<AppLayout />);
