@@ -11,10 +11,6 @@
     width: 100px;
     mix-blend-mode: multiply;
 }
-
-.nav-items {
-    
-}
 .nav-items > ul {
     display: flex;
     list-style: none;
@@ -27,7 +23,7 @@
 }
 
 .rest-card {
-width: 300px;
+    width: 300px;
     padding: 10px;
     margin: 5px;
     border-radius: 20px;
