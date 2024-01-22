@@ -88,3 +88,13 @@
     }
 }
 
+.login-btn{
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px;
+    font-size: 23px;
+    font-family: "Times New Roman", Times, serif;
+}
+
