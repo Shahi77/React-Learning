@@ -43,6 +43,9 @@
 .search {
     padding: 10px;
 }
+.filter{
+    display: flex;
+}
 .filter-btn{
     margin: 10px;
 }
@@ -97,4 +100,5 @@
     font-size: 23px;
     font-family: "Times New Roman", Times, serif;
 }
+
 
